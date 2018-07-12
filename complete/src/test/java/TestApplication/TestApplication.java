@@ -75,7 +75,7 @@ public class TestApplication {
 	@Test
 	public void _05insertFail(){
 		User user = new User();
-		user.setId(99999);
+		user.setId(1);
 		user.setUser("JJ");
 		user.setPass("JJ");
 		Response response = this.restTemplate.postForObject("http://localhost:"+port+"/insert",user,Response.class);
