@@ -20,13 +20,11 @@ import org.springframework.messaging.support.MessageBuilder;
 
 // JWT ข้างล่าง
 import com.auth0.jwt.JWT;
-import com.mysql.jdbc.Security;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import ConnectDB.Database;
-import junit.framework.Test;
 
 import org.springframework.statemachine.StateContext;
 import org.springframework.statemachine.StateMachine;

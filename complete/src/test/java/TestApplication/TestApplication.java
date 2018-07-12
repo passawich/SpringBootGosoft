@@ -113,15 +113,17 @@ public class TestApplication {
 		Response response = this.restTemplate.getForObject("http://localhost:"+port+"/searchuser?username=JJJJJJJJJ",Response.class);
         assertThat(response.getCode()).isEqualTo("fail");
 	}
-
-	@Test
-	public void _10loadImageNoImage() {
-		ResponseEntity<String> response = this.restTemplate.getForEntity("http://localhost:8080/loadImage?id=99999",String.class);
-		log.info(response);
-		Response res = this.restTemplate.getForObject("http://localhost:8080/loadImage?id=99999",Response.class);
-		log.info(res);
-        assertThat(response).isEqualTo("fail");
-	}
+	
+	
+//
+//	@Test
+//	public void _10loadImageNoImage() {
+//		ResponseEntity<String> response = this.restTemplate.getForEntity("http://localhost:8080/loadImage?id=99999",String.class);
+//		log.info(response);
+//		Response res = this.restTemplate.getForObject("http://localhost:8080/loadImage?id=99999",Response.class);
+//		log.info(res);
+//        assertThat(response).isEqualTo("fail");
+//	}
 	
 //	@Test
 //	public void _11uploadImageSuccess() {
