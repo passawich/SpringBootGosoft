@@ -142,13 +142,17 @@
     <build>
         <plugins>
             <plugin>
-                <!--  <groupId>org.springframework.boot</groupId>
+                <!--  ตอนแรกใช้ตัวนี้ ตอนยังไม่ Deploy -->
+                <!-- <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId> -->
+                
                 <groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>2.2</version>
 					<configuration>
 					<url>http://localhost:8080/manager/text</url>
+			        <username>admin</username>
+			        <password>admin</password>
 					<server>TomcatServer</server>
 					<path>/mkyongWebApp</path>
 				</configuration>
