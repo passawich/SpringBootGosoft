@@ -1,21 +1,14 @@
 package ConnectDB;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import com.mysql.fabric.xmlrpc.base.Data;
 import Controller.Service;
 import Model.User;
-import net.iharder.Base64;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 //import com.mysql.jdbc.Statement;
 public class Database { // การเข้าถึง Database ต่างๆ เช่น insert update delete

@@ -2,8 +2,6 @@ package Controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import com.auth0.jwt.JWT;
-
 import Model.Response;
 import Model.User;
 import java.io.File;
@@ -27,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.security.core.token.*;
 
 import java.applet.Applet;
 import java.awt.*;

@@ -4,42 +4,27 @@ import java.util.Arrays;
 
 
 import org.apache.log4j.Logger;
-import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.support.MessageBuilder;
-
-// JWT ข้างล่าง
-import com.auth0.jwt.JWT;
-import org.springframework.http.HttpMethod;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import ConnectDB.Database;
-
-import org.springframework.statemachine.StateContext;
-import org.springframework.statemachine.StateMachine;
-import org.springframework.statemachine.action.Action;
-import org.springframework.statemachine.config.EnableStateMachine;
-import org.springframework.statemachine.config.StateMachineConfigurerAdapter;
-import org.springframework.statemachine.config.StateMachineFactory;
-import org.springframework.statemachine.config.builders.StateMachineStateConfigurer;
-import org.springframework.statemachine.config.builders.StateMachineTransitionConfigurer;
-import org.springframework.stereotype.Component;
 
 
 @SpringBootApplication
-public class Application {
-
+public class Application extends SpringBootServletInitializer {
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+    }
+	
 	public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }

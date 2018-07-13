@@ -1,12 +1,5 @@
 package Security;
 
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-
-import ConnectDB.CustomUserDetailsService;
-import io.jsonwebtoken.Jwts;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
