@@ -7,14 +7,10 @@ import Model.User;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -24,14 +20,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
 
-import java.applet.Applet;
-import java.awt.*;
-import java.awt.image.*;
 import java.io.*;
-import java.net.URL;
-import javax.imageio.*;
 
 @RestController
 public class Controller {
@@ -40,6 +30,12 @@ public class Controller {
     @Autowired
     public Service service;
     private static Logger log = Logger.getLogger(Controller.class);
+    
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping("/")
+    public String Root(){
+    	return "Hello World!";
+    }
     
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping("/login")
